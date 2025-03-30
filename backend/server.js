@@ -1,7 +1,7 @@
 import express from "express";
 import connectDb from "./config/db.js";
 import todoRoute from "./routes/todoRoutes.js";
-import userRoute from "./routes/userRoutes.js"; // Ensure correct filename
+import userRoute from "./routes/userRoute.js"; 
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
