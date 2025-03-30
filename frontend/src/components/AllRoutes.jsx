@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom"
-import Register from "./register"
 import Login from "./Login"
 import Home from "../pages/Home"
 import EditTask from "./EditTask"
+import Register from "./Register"
 
 
 const AllRoutes = () => {
