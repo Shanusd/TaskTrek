@@ -6,13 +6,13 @@ import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
 
 const EditTask = () => {
-    const {userInfo} = useSelector((state)=> state.auth)
+    const { userInfo } = useSelector((state) => state.auth)
     const [task, setTask] = useState({
         title: "",
         description: '',
         status: false
     })
-    const { refetch } = useGetTodosQuery({ userId : userInfo._id})
+    const { refetch } = useGetTodosQuery({ userId: userInfo._id })
     const [updateTodo] = useUpdateTodoMutation();
     const navigate = useNavigate();
     const { id } = useParams();
@@ -49,9 +49,11 @@ const EditTask = () => {
 
     return (
         <div>
+
             {isLoading ? (<Loader />) : (<>
-                <div className="flex justify-center items-center min-h-screen bg-gray-100">
-                    <div className="bg-white p-8 rounded-lg shadow-lg w-96">
+                <div className="flex justify-center items-center min-h-screen bg-slate-600">
+
+                    <div className="bg-slate-400 p-8 rounded-lg shadow-lg w-96">
                         <h1 className="text-3xl font-semibold text-center text-gray-700 mb-6">TO DO LIST</h1>
 
                         <form onSubmit={handleSubmit}>
@@ -97,7 +99,7 @@ const EditTask = () => {
                                     type="submit"
                                     className="w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-300"
                                 >
-                                    Add Task
+                                    Update Task
                                 </button>
                             </div>
                         </form>
